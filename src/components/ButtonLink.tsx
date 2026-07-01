@@ -1,8 +1,9 @@
-import { FaCartShopping, FaPlus } from "react-icons/fa6";
-import { PrismicNextLink, PrismicNextLinkProps } from "@prismicio/next";
+import { PrismicNextLink } from "@prismicio/next";
 import clsx from "clsx";
+import type { ComponentPropsWithoutRef } from "react";
+import { FaCartShopping, FaPlus } from "react-icons/fa6";
 
-export type ButtonProps = PrismicNextLinkProps & {
+export type ButtonProps = ComponentPropsWithoutRef<typeof PrismicNextLink> & {
   color?: "orange" | "purple" | "lime";
   size?: "sm" | "md" | "lg";
   icon?: "cart" | "skateboard" | "plus";
